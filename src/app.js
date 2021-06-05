@@ -1,11 +1,21 @@
 const path = require("path");
 const express = require("express");
+const hbs = require("hbs");
 
+// creating web server.............
 const app = express();
 
+// paths for different dirs
 const staticDirPath = path.join(__dirname, "../static");
+const viewsDirPath = path.join(__dirname, "../templates/views");
+const partialsDirPath = path.join(__dirname, "../templates/partials");
 
+// App variables
 app.set("view engine", "hbs");
+app.set("views", viewsDirPath);
+hbs.registerPartials(partialsDirPath);
+
+// static dir setup
 app.use(express.static(staticDirPath));
 
 app.get("", (req, res) => {
@@ -36,6 +46,7 @@ app.get("/data", (req, res) => {
 	});
 });
 
+// Starting Web server........
 app.listen(3000, () => {
 	console.log("Server Running on port 3000");
 });
