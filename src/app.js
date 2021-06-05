@@ -46,6 +46,18 @@ app.get("/data", (req, res) => {
 	});
 });
 
+app.get("/about/*", (req, res) => {
+	res.render("404", {
+		message: "Article Not Found....",
+	});
+});
+
+app.get("/*", (req, res) => {
+	res.render("404", {
+		message: "404! Page Not Found..",
+	});
+});
+
 // Starting Web server........
 app.listen(3000, () => {
 	console.log("Server Running on port 3000");
