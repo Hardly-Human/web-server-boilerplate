@@ -46,6 +46,8 @@ app.get("/data", (req, res) => {
 	});
 });
 
+// 404 pages................................
+
 app.get("/about/*", (req, res) => {
 	res.render("404", {
 		message: "Article Not Found....",
