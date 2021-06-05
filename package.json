@@ -1,0 +1,23 @@
+{
+  "name": "web-server-boilerplate",
+  "version": "1.0.0",
+  "description": "An express web-server boilerplate with Dynamic pages and Templating.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hardly-Human/web-server-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hardly-Human/web-server-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Hardly-Human/web-server-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
